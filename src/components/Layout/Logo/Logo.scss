@@ -1,0 +1,20 @@
+.layout-sidebar-logo {
+    display: flex;
+    align-items: center;
+    color: var(--surface-900);
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 200px;
+    height: 6rem;
+    border-radius: 12px;
+    margin-left: 1rem;
+
+    img {
+        height: 2.5rem;
+        margin-right: .5rem;
+    }
+
+    &:focus {
+        @include focused();
+    }
+}
