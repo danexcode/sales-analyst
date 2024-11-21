@@ -4,18 +4,25 @@ import { Menuitem } from "../MenuItem/MenuItem"
 export const Menu = () => {
     const model: AppMenuItem[] = [
         {
-            label:"Proyecciones",
+            label:"Proyecciones y Metas",
             items: [
-                { label: "General", icon: "pi pi-fw pi-chart-bar", to: "/" },
-                { label: "Abiertas", icon: "pi pi-fw pi-share-alt", to: "/transacciones/abiertas" },
-                { label: "Cerradas", icon: "pi pi-fw pi-check-square", to: "/transacciones/cerradas" }
+                { label: "General", icon: "pi pi-fw pi-chart-bar", to: "/proyecciones" },
+                { label: "Metas", icon: "pi pi-fw pi-share-alt", to: "/proyecciones/metas" },
+                { label: "Completadas", icon: "pi pi-fw pi-check-square", to: "/proyecciones/completadas" }
+            ]
+        },
+        {
+            label:"Recetas",
+            items: [
+                { label: "General", icon: "pi pi-fw pi-user", to: "/recetas" },
+                { label: "Ingredientes", icon: "pi pi-fw pi-pencil", to: "/recetas/ingredientes" }
             ]
         },
         {
             label:"Reportes",
             items: [
-                { label: "General", icon: "pi pi-fw pi-user", to: "/clientes" },
-                { label: "Crear", icon: "pi pi-fw pi-pencil", to: "/clientes" }
+                { label: "General", icon: "pi pi-fw pi-user", to: "/reportes" },
+                { label: "Crear", icon: "pi pi-fw pi-pencil", to: "/reportes/crear" }
             ]
         }
     ]
