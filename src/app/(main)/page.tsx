@@ -7,33 +7,31 @@ import { ProgressBar } from 'primereact/progressbar';
 import { Divider } from 'primereact/divider';
 import { Dropdown } from 'primereact/dropdown';
 
+
 export default function Home(){
-    const [selectedTemp, setSelectedCTemp] = useState(null);
+    const [selectedTemp, setSelectedCTemp] = useState({ name: 'Hoy', code: 'Hoy' });
     const temporalities = [
-        { name: 'Hoy', code: 'Hoy' },
-        { name: 'Diario', code: 'Diario' },
-        { name: 'Semanal', code: 'Semanal' },
-        { name: 'Mensual', code: 'Mensual' },
-        { name: 'Trimestral', code: 'Trimestral' },
-        { name: 'Anual', code: 'Anual' },
+        { name: 'Actual', code: 'Hoy' },
+        { name: 'Semana', code: 'Semanal' },
+        { name: 'Mes', code: 'Mensual' },
     ];
 
     const barData = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
         datasets: [
             {
-                label: 'My First dataset',
+                label: 'Facturación',
                 backgroundColor: '#F59E0B',
                 borderColor: '#F59100',
                 data: [65, 59, 80, 81, 56, 55, 40]
             },
             {
-                label: 'My Second dataset',
+                label: 'Utilidad',
                 backgroundColor: '#FBD596',
                 borderColor: '#FBD590',
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [28, 48, 40, 19, 36, 27, 20]
             }
-        ]
+        ],
     };
 
     const pieData = {
@@ -81,7 +79,7 @@ export default function Home(){
                 <Card>
                     <div className='home-card'>
                         <div>
-                            <h5>Ganancias</h5>
+                            <h5>Facturación</h5>
                             <span>243.2$</span>
                             <div>
                                 <p>+5%</p>
@@ -96,7 +94,7 @@ export default function Home(){
                 <Card>
                     <div className='home-card'>
                         <div>
-                            <h5>Compra Media</h5>
+                            <h5>Ticket Medio</h5>
                             <span>6.43$</span>
                             <div>
                                 <p>-2%</p>
@@ -111,8 +109,8 @@ export default function Home(){
                 <Card>
                     <div className='home-card'>
                         <div>
-                            <h5>Clientes</h5>
-                            <span>90</span>
+                            <h5>Utilidad</h5>
+                            <span>72.96$</span>
                             <div>
                                 <p>+5%</p>
                             </div>
@@ -124,7 +122,7 @@ export default function Home(){
                 </Card>
 
                 <Card className='chart'>
-                    <h5>Ventas por Mes</h5>
+                    <h5>$ Ventas</h5>
                     <Chart type="bar" data={barData}></Chart>
                 </Card>
 

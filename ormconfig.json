@@ -1,0 +1,10 @@
+{
+    "type": "mssql",
+    "host": "localhost",
+    "port": 1437,
+    "username": "sa",
+    "password": "Admin881008",
+    "database": "Control_Ventas",
+    "entities": ["./src/app/api/database/facturacion/entities/*.ts"],
+    "synchronize": true
+}

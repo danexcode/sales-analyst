@@ -5,8 +5,12 @@ import Layout from "app/components/Layout/Layout";
 
 import "primereact/resources/themes/saga-orange/theme.css";
 import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
 import "app/styles/layout/layout.scss";
-import "app/styles/home/index.scss"
+import "app/styles/home/index.scss";
+
+import { StartApp } from "./api/database/facturacion/orm";
+import "reflect-metadata";
 
 export const metadata: Metadata = {
   title: "Panaderia",
@@ -18,6 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  //StartApp()
   return (
     <PrimeReactProvider>
       <html lang="en">
