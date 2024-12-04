@@ -9,7 +9,6 @@ import 'primeflex/primeflex.css';
 import "app/styles/layout/layout.scss";
 import "app/styles/home/index.scss";
 
-import { StartApp } from "./api/database/facturacion/orm";
 import "reflect-metadata";
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  //StartApp()
   return (
     <PrimeReactProvider>
       <html lang="en">

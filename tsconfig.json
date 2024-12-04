@@ -24,6 +24,6 @@
       "app/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.mjs", "src/app/api/database/facturacion/config.js", "src/app/api/database/facturacion/connection.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.mjs", "src/app/api/database/facturacion/config.ts", "src/app/api/database/facturacion/connection.ts"],
   "exclude": ["node_modules"]
 }
